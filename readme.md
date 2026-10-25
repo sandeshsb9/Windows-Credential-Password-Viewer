@@ -4,13 +4,40 @@ Windows Credential Manager stores credentials used by Windows applications, netw
 
 The built-in `cmdkey.exe` utility can display the credential targets registered on the local Windows system.
 
-
 ## Requirements
 
 - Windows operating system.
 - Command Prompt or PowerShell.
+- Git installed.
 - Access to the Windows user account whose credentials you intend to inspect.
-- Authorization to access the relevant credential entries.
+
+## Installation
+
+### Step 1: Clone the repository
+
+Open Command Prompt and run:
+
+```cmd
+git clone https://github.com/sandeshsb9/Windows-Credential-Password-Viewer.git
+```
+
+### Step 2: Open the project folder
+
+```cmd
+cd Windows-Credential-Password-Viewer
+```
+
+To open the project in VS Code, run:
+
+```cmd
+code .
+```
+
+To view the files in CMD, run:
+
+```cmd
+dir
+```
 
 ## Usage
 
@@ -59,8 +86,7 @@ $Target = "LegacyGeneric:target=git:https://github.com"
 
 Replace the example value with the actual target identifier from your system.
 
-**Important:** A credential target identifies a saved credential entry; it does not necessarily expose the stored password. Use supported Windows credential-management interfaces to manage or update credentials.
-
+**Important:** A credential target identifies a saved credential entry; it does not necessarily expose the stored password. The script also requires its `CredentialManager` PowerShell module. Review the script before running it.
 
 ## Troubleshooting
 
