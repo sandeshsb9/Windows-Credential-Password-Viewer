@@ -41,9 +41,17 @@ dir
 
 ## Usage
 
-### Step 1: List saved credential targets
+### Step 1: List Saved Credential Targets
 
-Open **Command Prompt** and run:
+Open **Command Prompt** and run the following commands.
+
+First, install the PowerShell `CredentialManager` module for the current user:
+
+```cmd
+Install-Module -Name CredentialManager -Scope CurrentUser
+```
+
+Then, list the saved credential targets:
 
 ```cmd
 cmdkey.exe /list
